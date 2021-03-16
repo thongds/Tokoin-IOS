@@ -1,0 +1,887 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9CFF35263E83DC65249C122E /* Pods_Tokoin_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5276FE3D44703D45FFA983F /* Pods_Tokoin_ios.framework */; };
+		9F42CE095E550689874FF909 /* Pods_Tokoin_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D798F9AE9B935C17A55EB36 /* Pods_Tokoin_iosTests.framework */; };
+		AF45A4B62600AA1F00B8E362 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF45A4B52600AA1F00B8E362 /* RegisterViewController.swift */; };
+		AF45A4C62600B3D900B8E362 /* CustomNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF45A4C52600B3D900B8E362 /* CustomNewsViewController.swift */; };
+		AF45A4D22600B56200B8E362 /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF45A4D12600B56200B8E362 /* NewsDetailViewController.swift */; };
+		AF5873352601108B00842CA2 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5873342601108B00842CA2 /* HomeViewModel.swift */; };
+		AF58733A2601116900842CA2 /* NewsListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5873392601116900842CA2 /* NewsListModel.swift */; };
+		AF58734D26015AF500842CA2 /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF58734C26015AF500842CA2 /* HomeRepository.swift */; };
+		AF58735326015B8900842CA2 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF58735226015B8900842CA2 /* AppConfig.swift */; };
+		AF58735926015D1B00842CA2 /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF58735826015D1B00842CA2 /* ErrorModel.swift */; };
+		AF58736126016B2C00842CA2 /* CachedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF58736026016B2C00842CA2 /* CachedImageView.swift */; };
+		AF58736A26016BAD00842CA2 /* DiscardableImageCacheItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF58736926016BAD00842CA2 /* DiscardableImageCacheItem.swift */; };
+		AF5F2E9D25FCB1B1005C81BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5F2E9C25FCB1B1005C81BC /* AppDelegate.swift */; };
+		AF5F2E9F25FCB1B1005C81BC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5F2E9E25FCB1B1005C81BC /* SceneDelegate.swift */; };
+		AF5F2EA125FCB1B1005C81BC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5F2EA025FCB1B1005C81BC /* HomeViewController.swift */; };
+		AF5F2EA425FCB1B1005C81BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF5F2EA225FCB1B1005C81BC /* Main.storyboard */; };
+		AF5F2EA725FCB1B1005C81BC /* Tokoin_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AF5F2EA525FCB1B1005C81BC /* Tokoin_ios.xcdatamodeld */; };
+		AF5F2EA925FCB1B2005C81BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF5F2EA825FCB1B2005C81BC /* Assets.xcassets */; };
+		AF5F2EAC25FCB1B2005C81BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF5F2EAA25FCB1B2005C81BC /* LaunchScreen.storyboard */; };
+		AF5F2EB725FCB1B2005C81BC /* Tokoin_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5F2EB625FCB1B2005C81BC /* Tokoin_iosTests.swift */; };
+		AF5F2EC225FCB1B2005C81BC /* Tokoin_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5F2EC125FCB1B2005C81BC /* Tokoin_iosUITests.swift */; };
+		AF5F2ED925FCD203005C81BC /* HomeItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5F2ED825FCD203005C81BC /* HomeItemCell.swift */; };
+		AF5F2EDE25FCD20A005C81BC /* AutoLayoutExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5F2EDD25FCD20A005C81BC /* AutoLayoutExtension.swift */; };
+		AF5F2EE825FCE064005C81BC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5F2EE725FCE064005C81BC /* LoginViewController.swift */; };
+		D0F371C94D4A0545D6DC06F0 /* Pods_Tokoin_ios_Tokoin_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2969D874E8ADE700C40CEE6 /* Pods_Tokoin_ios_Tokoin_iosUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AF5F2EB325FCB1B2005C81BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF5F2E9125FCB1B1005C81BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF5F2E9825FCB1B1005C81BC;
+			remoteInfo = "Tokoin-ios";
+		};
+		AF5F2EBE25FCB1B2005C81BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF5F2E9125FCB1B1005C81BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF5F2E9825FCB1B1005C81BC;
+			remoteInfo = "Tokoin-ios";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		132CE9F6B9BE2D03F5F664AF /* Pods-Tokoin-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tokoin-ios.debug.xcconfig"; path = "Target Support Files/Pods-Tokoin-ios/Pods-Tokoin-ios.debug.xcconfig"; sourceTree = "<group>"; };
+		139450ABD0545209B38DED05 /* Pods-Tokoin-ios-Tokoin-iosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tokoin-ios-Tokoin-iosUITests.debug.xcconfig"; path = "Target Support Files/Pods-Tokoin-ios-Tokoin-iosUITests/Pods-Tokoin-ios-Tokoin-iosUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6BB2CD720604BD90E21456C9 /* Pods-Tokoin-ios-Tokoin-iosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tokoin-ios-Tokoin-iosUITests.release.xcconfig"; path = "Target Support Files/Pods-Tokoin-ios-Tokoin-iosUITests/Pods-Tokoin-ios-Tokoin-iosUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7B79012AA218DBEF84C3565C /* Pods-Tokoin-iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tokoin-iosTests.debug.xcconfig"; path = "Target Support Files/Pods-Tokoin-iosTests/Pods-Tokoin-iosTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7D798F9AE9B935C17A55EB36 /* Pods_Tokoin_iosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tokoin_iosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2969D874E8ADE700C40CEE6 /* Pods_Tokoin_ios_Tokoin_iosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tokoin_ios_Tokoin_iosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A77C18D50C3758EBB7F03D88 /* Pods-Tokoin-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tokoin-ios.release.xcconfig"; path = "Target Support Files/Pods-Tokoin-ios/Pods-Tokoin-ios.release.xcconfig"; sourceTree = "<group>"; };
+		AF45A4B52600AA1F00B8E362 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		AF45A4C52600B3D900B8E362 /* CustomNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNewsViewController.swift; sourceTree = "<group>"; };
+		AF45A4D12600B56200B8E362 /* NewsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
+		AF5873342601108B00842CA2 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		AF5873392601116900842CA2 /* NewsListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListModel.swift; sourceTree = "<group>"; };
+		AF58734C26015AF500842CA2 /* HomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepository.swift; sourceTree = "<group>"; };
+		AF58735226015B8900842CA2 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		AF58735826015D1B00842CA2 /* ErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorModel.swift; sourceTree = "<group>"; };
+		AF58736026016B2C00842CA2 /* CachedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedImageView.swift; sourceTree = "<group>"; };
+		AF58736926016BAD00842CA2 /* DiscardableImageCacheItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscardableImageCacheItem.swift; sourceTree = "<group>"; };
+		AF5F2E9925FCB1B1005C81BC /* Tokoin-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tokoin-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF5F2E9C25FCB1B1005C81BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AF5F2E9E25FCB1B1005C81BC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		AF5F2EA025FCB1B1005C81BC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		AF5F2EA325FCB1B1005C81BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AF5F2EA625FCB1B1005C81BC /* Tokoin_ios.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Tokoin_ios.xcdatamodel; sourceTree = "<group>"; };
+		AF5F2EA825FCB1B2005C81BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AF5F2EAB25FCB1B2005C81BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AF5F2EAD25FCB1B2005C81BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF5F2EB225FCB1B2005C81BC /* Tokoin-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tokoin-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF5F2EB625FCB1B2005C81BC /* Tokoin_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tokoin_iosTests.swift; sourceTree = "<group>"; };
+		AF5F2EB825FCB1B2005C81BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF5F2EBD25FCB1B2005C81BC /* Tokoin-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tokoin-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF5F2EC125FCB1B2005C81BC /* Tokoin_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tokoin_iosUITests.swift; sourceTree = "<group>"; };
+		AF5F2EC325FCB1B2005C81BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF5F2ED825FCD203005C81BC /* HomeItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeItemCell.swift; sourceTree = "<group>"; };
+		AF5F2EDD25FCD20A005C81BC /* AutoLayoutExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoLayoutExtension.swift; sourceTree = "<group>"; };
+		AF5F2EE725FCE064005C81BC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D5276FE3D44703D45FFA983F /* Pods_Tokoin_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tokoin_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6F2A754D32801EEFD2009AC /* Pods-Tokoin-iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tokoin-iosTests.release.xcconfig"; path = "Target Support Files/Pods-Tokoin-iosTests/Pods-Tokoin-iosTests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AF5F2E9625FCB1B1005C81BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CFF35263E83DC65249C122E /* Pods_Tokoin_ios.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF5F2EAF25FCB1B2005C81BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F42CE095E550689874FF909 /* Pods_Tokoin_iosTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF5F2EBA25FCB1B2005C81BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0F371C94D4A0545D6DC06F0 /* Pods_Tokoin_ios_Tokoin_iosUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2266C0561402EBD251C63526 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D5276FE3D44703D45FFA983F /* Pods_Tokoin_ios.framework */,
+				A2969D874E8ADE700C40CEE6 /* Pods_Tokoin_ios_Tokoin_iosUITests.framework */,
+				7D798F9AE9B935C17A55EB36 /* Pods_Tokoin_iosTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		30F3074A28683A4013794073 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				132CE9F6B9BE2D03F5F664AF /* Pods-Tokoin-ios.debug.xcconfig */,
+				A77C18D50C3758EBB7F03D88 /* Pods-Tokoin-ios.release.xcconfig */,
+				139450ABD0545209B38DED05 /* Pods-Tokoin-ios-Tokoin-iosUITests.debug.xcconfig */,
+				6BB2CD720604BD90E21456C9 /* Pods-Tokoin-ios-Tokoin-iosUITests.release.xcconfig */,
+				7B79012AA218DBEF84C3565C /* Pods-Tokoin-iosTests.debug.xcconfig */,
+				F6F2A754D32801EEFD2009AC /* Pods-Tokoin-iosTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		AF45A4BA2600AD5900B8E362 /* register&Login */ = {
+			isa = PBXGroup;
+			children = (
+				AF5F2EE725FCE064005C81BC /* LoginViewController.swift */,
+				AF45A4B52600AA1F00B8E362 /* RegisterViewController.swift */,
+			);
+			path = "register&Login";
+			sourceTree = "<group>";
+		};
+		AF45A4C12600AD7100B8E362 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				AF5F2EE325FCD24C005C81BC /* home */,
+				AF45A4BA2600AD5900B8E362 /* register&Login */,
+				AF45A4CA2600B3E000B8E362 /* customNew */,
+				AF5873422601118500842CA2 /* newDetail */,
+				AF58733E2601117000842CA2 /* commonModel */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		AF45A4CA2600B3E000B8E362 /* customNew */ = {
+			isa = PBXGroup;
+			children = (
+				AF45A4C52600B3D900B8E362 /* CustomNewsViewController.swift */,
+			);
+			path = customNew;
+			sourceTree = "<group>";
+		};
+		AF58733E2601117000842CA2 /* commonModel */ = {
+			isa = PBXGroup;
+			children = (
+				AF5873392601116900842CA2 /* NewsListModel.swift */,
+				AF58735826015D1B00842CA2 /* ErrorModel.swift */,
+			);
+			path = commonModel;
+			sourceTree = "<group>";
+		};
+		AF5873422601118500842CA2 /* newDetail */ = {
+			isa = PBXGroup;
+			children = (
+				AF45A4D12600B56200B8E362 /* NewsDetailViewController.swift */,
+			);
+			path = newDetail;
+			sourceTree = "<group>";
+		};
+		AF58735126015B7A00842CA2 /* config */ = {
+			isa = PBXGroup;
+			children = (
+				AF58735226015B8900842CA2 /* AppConfig.swift */,
+			);
+			path = config;
+			sourceTree = "<group>";
+		};
+		AF58736526016B3700842CA2 /* ViewExtension */ = {
+			isa = PBXGroup;
+			children = (
+				AF5F2EDD25FCD20A005C81BC /* AutoLayoutExtension.swift */,
+				AF58736026016B2C00842CA2 /* CachedImageView.swift */,
+				AF58736926016BAD00842CA2 /* DiscardableImageCacheItem.swift */,
+			);
+			path = ViewExtension;
+			sourceTree = "<group>";
+		};
+		AF5F2E9025FCB1B1005C81BC = {
+			isa = PBXGroup;
+			children = (
+				AF5F2E9B25FCB1B1005C81BC /* Tokoin-ios */,
+				AF5F2EB525FCB1B2005C81BC /* Tokoin-iosTests */,
+				AF5F2EC025FCB1B2005C81BC /* Tokoin-iosUITests */,
+				AF5F2E9A25FCB1B1005C81BC /* Products */,
+				30F3074A28683A4013794073 /* Pods */,
+				2266C0561402EBD251C63526 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AF5F2E9A25FCB1B1005C81BC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AF5F2E9925FCB1B1005C81BC /* Tokoin-ios.app */,
+				AF5F2EB225FCB1B2005C81BC /* Tokoin-iosTests.xctest */,
+				AF5F2EBD25FCB1B2005C81BC /* Tokoin-iosUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AF5F2E9B25FCB1B1005C81BC /* Tokoin-ios */ = {
+			isa = PBXGroup;
+			children = (
+				AF58735126015B7A00842CA2 /* config */,
+				AF5F2E9C25FCB1B1005C81BC /* AppDelegate.swift */,
+				AF58736526016B3700842CA2 /* ViewExtension */,
+				AF5F2E9E25FCB1B1005C81BC /* SceneDelegate.swift */,
+				AF45A4C12600AD7100B8E362 /* ui */,
+				AF5F2EA225FCB1B1005C81BC /* Main.storyboard */,
+				AF5F2EA825FCB1B2005C81BC /* Assets.xcassets */,
+				AF5F2EAA25FCB1B2005C81BC /* LaunchScreen.storyboard */,
+				AF5F2EAD25FCB1B2005C81BC /* Info.plist */,
+				AF5F2EA525FCB1B1005C81BC /* Tokoin_ios.xcdatamodeld */,
+			);
+			path = "Tokoin-ios";
+			sourceTree = "<group>";
+		};
+		AF5F2EB525FCB1B2005C81BC /* Tokoin-iosTests */ = {
+			isa = PBXGroup;
+			children = (
+				AF5F2EB625FCB1B2005C81BC /* Tokoin_iosTests.swift */,
+				AF5F2EB825FCB1B2005C81BC /* Info.plist */,
+			);
+			path = "Tokoin-iosTests";
+			sourceTree = "<group>";
+		};
+		AF5F2EC025FCB1B2005C81BC /* Tokoin-iosUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AF5F2EC125FCB1B2005C81BC /* Tokoin_iosUITests.swift */,
+				AF5F2EC325FCB1B2005C81BC /* Info.plist */,
+			);
+			path = "Tokoin-iosUITests";
+			sourceTree = "<group>";
+		};
+		AF5F2EE325FCD24C005C81BC /* home */ = {
+			isa = PBXGroup;
+			children = (
+				AF5F2ED825FCD203005C81BC /* HomeItemCell.swift */,
+				AF5F2EA025FCB1B1005C81BC /* HomeViewController.swift */,
+				AF5873342601108B00842CA2 /* HomeViewModel.swift */,
+				AF58734C26015AF500842CA2 /* HomeRepository.swift */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AF5F2E9825FCB1B1005C81BC /* Tokoin-ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF5F2EC625FCB1B2005C81BC /* Build configuration list for PBXNativeTarget "Tokoin-ios" */;
+			buildPhases = (
+				2B85C65D92CFF9FD944F652F /* [CP] Check Pods Manifest.lock */,
+				AF5F2E9525FCB1B1005C81BC /* Sources */,
+				AF5F2E9625FCB1B1005C81BC /* Frameworks */,
+				AF5F2E9725FCB1B1005C81BC /* Resources */,
+				810184507606858B058022A0 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Tokoin-ios";
+			productName = "Tokoin-ios";
+			productReference = AF5F2E9925FCB1B1005C81BC /* Tokoin-ios.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AF5F2EB125FCB1B2005C81BC /* Tokoin-iosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF5F2EC925FCB1B2005C81BC /* Build configuration list for PBXNativeTarget "Tokoin-iosTests" */;
+			buildPhases = (
+				D5856D75ADD404F99B17301B /* [CP] Check Pods Manifest.lock */,
+				AF5F2EAE25FCB1B2005C81BC /* Sources */,
+				AF5F2EAF25FCB1B2005C81BC /* Frameworks */,
+				AF5F2EB025FCB1B2005C81BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF5F2EB425FCB1B2005C81BC /* PBXTargetDependency */,
+			);
+			name = "Tokoin-iosTests";
+			productName = "Tokoin-iosTests";
+			productReference = AF5F2EB225FCB1B2005C81BC /* Tokoin-iosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AF5F2EBC25FCB1B2005C81BC /* Tokoin-iosUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF5F2ECC25FCB1B2005C81BC /* Build configuration list for PBXNativeTarget "Tokoin-iosUITests" */;
+			buildPhases = (
+				F067CE7F88E88E57988D4EF1 /* [CP] Check Pods Manifest.lock */,
+				AF5F2EB925FCB1B2005C81BC /* Sources */,
+				AF5F2EBA25FCB1B2005C81BC /* Frameworks */,
+				AF5F2EBB25FCB1B2005C81BC /* Resources */,
+				AA79A1A5E3D2DDA395C37330 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF5F2EBF25FCB1B2005C81BC /* PBXTargetDependency */,
+			);
+			name = "Tokoin-iosUITests";
+			productName = "Tokoin-iosUITests";
+			productReference = AF5F2EBD25FCB1B2005C81BC /* Tokoin-iosUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AF5F2E9125FCB1B1005C81BC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					AF5F2E9825FCB1B1005C81BC = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					AF5F2EB125FCB1B2005C81BC = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = AF5F2E9825FCB1B1005C81BC;
+					};
+					AF5F2EBC25FCB1B2005C81BC = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = AF5F2E9825FCB1B1005C81BC;
+					};
+				};
+			};
+			buildConfigurationList = AF5F2E9425FCB1B1005C81BC /* Build configuration list for PBXProject "Tokoin-ios" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AF5F2E9025FCB1B1005C81BC;
+			productRefGroup = AF5F2E9A25FCB1B1005C81BC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AF5F2E9825FCB1B1005C81BC /* Tokoin-ios */,
+				AF5F2EB125FCB1B2005C81BC /* Tokoin-iosTests */,
+				AF5F2EBC25FCB1B2005C81BC /* Tokoin-iosUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AF5F2E9725FCB1B1005C81BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF5F2EAC25FCB1B2005C81BC /* LaunchScreen.storyboard in Resources */,
+				AF5F2EA925FCB1B2005C81BC /* Assets.xcassets in Resources */,
+				AF5F2EA425FCB1B1005C81BC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF5F2EB025FCB1B2005C81BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF5F2EBB25FCB1B2005C81BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2B85C65D92CFF9FD944F652F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tokoin-ios-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		810184507606858B058022A0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tokoin-ios/Pods-Tokoin-ios-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tokoin-ios/Pods-Tokoin-ios-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tokoin-ios/Pods-Tokoin-ios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AA79A1A5E3D2DDA395C37330 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tokoin-ios-Tokoin-iosUITests/Pods-Tokoin-ios-Tokoin-iosUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tokoin-ios-Tokoin-iosUITests/Pods-Tokoin-ios-Tokoin-iosUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tokoin-ios-Tokoin-iosUITests/Pods-Tokoin-ios-Tokoin-iosUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D5856D75ADD404F99B17301B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tokoin-iosTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F067CE7F88E88E57988D4EF1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tokoin-ios-Tokoin-iosUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AF5F2E9525FCB1B1005C81BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF58735926015D1B00842CA2 /* ErrorModel.swift in Sources */,
+				AF58733A2601116900842CA2 /* NewsListModel.swift in Sources */,
+				AF58734D26015AF500842CA2 /* HomeRepository.swift in Sources */,
+				AF5F2EE825FCE064005C81BC /* LoginViewController.swift in Sources */,
+				AF58735326015B8900842CA2 /* AppConfig.swift in Sources */,
+				AF5873352601108B00842CA2 /* HomeViewModel.swift in Sources */,
+				AF58736126016B2C00842CA2 /* CachedImageView.swift in Sources */,
+				AF5F2EA125FCB1B1005C81BC /* HomeViewController.swift in Sources */,
+				AF5F2EA725FCB1B1005C81BC /* Tokoin_ios.xcdatamodeld in Sources */,
+				AF45A4B62600AA1F00B8E362 /* RegisterViewController.swift in Sources */,
+				AF45A4D22600B56200B8E362 /* NewsDetailViewController.swift in Sources */,
+				AF5F2EDE25FCD20A005C81BC /* AutoLayoutExtension.swift in Sources */,
+				AF5F2E9D25FCB1B1005C81BC /* AppDelegate.swift in Sources */,
+				AF58736A26016BAD00842CA2 /* DiscardableImageCacheItem.swift in Sources */,
+				AF45A4C62600B3D900B8E362 /* CustomNewsViewController.swift in Sources */,
+				AF5F2E9F25FCB1B1005C81BC /* SceneDelegate.swift in Sources */,
+				AF5F2ED925FCD203005C81BC /* HomeItemCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF5F2EAE25FCB1B2005C81BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF5F2EB725FCB1B2005C81BC /* Tokoin_iosTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF5F2EB925FCB1B2005C81BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF5F2EC225FCB1B2005C81BC /* Tokoin_iosUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AF5F2EB425FCB1B2005C81BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF5F2E9825FCB1B1005C81BC /* Tokoin-ios */;
+			targetProxy = AF5F2EB325FCB1B2005C81BC /* PBXContainerItemProxy */;
+		};
+		AF5F2EBF25FCB1B2005C81BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF5F2E9825FCB1B1005C81BC /* Tokoin-ios */;
+			targetProxy = AF5F2EBE25FCB1B2005C81BC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AF5F2EA225FCB1B1005C81BC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF5F2EA325FCB1B1005C81BC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AF5F2EAA25FCB1B2005C81BC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF5F2EAB25FCB1B2005C81BC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AF5F2EC425FCB1B2005C81BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AF5F2EC525FCB1B2005C81BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AF5F2EC725FCB1B2005C81BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 132CE9F6B9BE2D03F5F664AF /* Pods-Tokoin-ios.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 89TP3C25P2;
+				INFOPLIST_FILE = "Tokoin-ios/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Tokoin-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AF5F2EC825FCB1B2005C81BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A77C18D50C3758EBB7F03D88 /* Pods-Tokoin-ios.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 89TP3C25P2;
+				INFOPLIST_FILE = "Tokoin-ios/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Tokoin-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AF5F2ECA25FCB1B2005C81BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B79012AA218DBEF84C3565C /* Pods-Tokoin-iosTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 89TP3C25P2;
+				INFOPLIST_FILE = "Tokoin-iosTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Tokoin-iosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tokoin-ios.app/Tokoin-ios";
+			};
+			name = Debug;
+		};
+		AF5F2ECB25FCB1B2005C81BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6F2A754D32801EEFD2009AC /* Pods-Tokoin-iosTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 89TP3C25P2;
+				INFOPLIST_FILE = "Tokoin-iosTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Tokoin-iosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tokoin-ios.app/Tokoin-ios";
+			};
+			name = Release;
+		};
+		AF5F2ECD25FCB1B2005C81BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 139450ABD0545209B38DED05 /* Pods-Tokoin-ios-Tokoin-iosUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 89TP3C25P2;
+				INFOPLIST_FILE = "Tokoin-iosUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Tokoin-iosUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Tokoin-ios";
+			};
+			name = Debug;
+		};
+		AF5F2ECE25FCB1B2005C81BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6BB2CD720604BD90E21456C9 /* Pods-Tokoin-ios-Tokoin-iosUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 89TP3C25P2;
+				INFOPLIST_FILE = "Tokoin-iosUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Tokoin-iosUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Tokoin-ios";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AF5F2E9425FCB1B1005C81BC /* Build configuration list for PBXProject "Tokoin-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF5F2EC425FCB1B2005C81BC /* Debug */,
+				AF5F2EC525FCB1B2005C81BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF5F2EC625FCB1B2005C81BC /* Build configuration list for PBXNativeTarget "Tokoin-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF5F2EC725FCB1B2005C81BC /* Debug */,
+				AF5F2EC825FCB1B2005C81BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF5F2EC925FCB1B2005C81BC /* Build configuration list for PBXNativeTarget "Tokoin-iosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF5F2ECA25FCB1B2005C81BC /* Debug */,
+				AF5F2ECB25FCB1B2005C81BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF5F2ECC25FCB1B2005C81BC /* Build configuration list for PBXNativeTarget "Tokoin-iosUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF5F2ECD25FCB1B2005C81BC /* Debug */,
+				AF5F2ECE25FCB1B2005C81BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AF5F2EA525FCB1B1005C81BC /* Tokoin_ios.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AF5F2EA625FCB1B1005C81BC /* Tokoin_ios.xcdatamodel */,
+			);
+			currentVersion = AF5F2EA625FCB1B1005C81BC /* Tokoin_ios.xcdatamodel */;
+			path = Tokoin_ios.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = AF5F2E9125FCB1B1005C81BC /* Project object */;
+}
