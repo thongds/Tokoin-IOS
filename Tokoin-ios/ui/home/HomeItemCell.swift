@@ -9,10 +9,12 @@ class HomeItemCell: UICollectionViewCell{
                 title.text = articleItem!.title
                 thumb.loadImage(urlString : articleItem!.urlToImage ?? "")
                 descript.text = articleItem!.description
+                timer.text = AppConfig.convertUTCTime(utcTimeFormat: articleItem!.publishedAt)
             }
            
         }
     }
+    
     let thumb : CachedImageView = {
 		let image = CachedImageView()
 		image.translatesAutoresizingMaskIntoConstraints = false
@@ -78,6 +80,6 @@ class HomeItemCell: UICollectionViewCell{
 		title.anchor(contentView.topAnchor,left: thumb.rightAnchor,bottom: nil,right: contentView.rightAnchor,topConstant: 0,leftConstant: 10,bottomConstant: 0,rightConstant: 10, widthConstant: 0, heightConstant: 33)
 		descript.anchor(title.bottomAnchor,left: title.leftAnchor,bottom: nil,right: title.rightAnchor,topConstant: 10,leftConstant: 0,bottomConstant: 2,rightConstant: 0, widthConstant: 0, heightConstant: 0)
 		timerIcon.anchor(nil,left: descript.leftAnchor,bottom: contentView.bottomAnchor,right: nil,topConstant: 0,leftConstant: 0,bottomConstant: 0,rightConstant: 0, widthConstant: 24, heightConstant: 24)
-		timer.anchor(timerIcon.topAnchor,left: timerIcon.rightAnchor,bottom: timerIcon.bottomAnchor,right: nil,topConstant: 0,leftConstant: 10,bottomConstant: 0,rightConstant: 0, widthConstant: 148, heightConstant: 0)
+		timer.anchor(timerIcon.topAnchor,left: timerIcon.rightAnchor,bottom: timerIcon.bottomAnchor,right: nil,topConstant: 0,leftConstant: 10,bottomConstant: 0,rightConstant: 0, widthConstant: 200, heightConstant: 0)
     	}
 }
