@@ -4,15 +4,7 @@ import RxSwift
 class RegisterViewController: UIViewController{
     let viewModel = RegisterViewModel()
     private let disposeBag = DisposeBag()
-    let loginHeader : UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
-        label.text="Register"
-        label.font = UIFont.systemFont(ofSize: 30)
-        label.textAlignment = .center
-        return label
-        }()
+    
     let emailCard : UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -56,6 +48,7 @@ class RegisterViewController: UIViewController{
         }()
     let passwordEdit : UITextField = {
         let textField = UITextField()
+        textField.isSecureTextEntry = true
         textField.placeholder = "input your password here ..."
         return textField
         }()
@@ -79,6 +72,7 @@ class RegisterViewController: UIViewController{
         }()
     let passwordEditCf : UITextField = {
         let textField = UITextField()
+        textField.isSecureTextEntry = true
         textField.placeholder = "input your password here ..."
         return textField
         }()
@@ -93,6 +87,7 @@ class RegisterViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "Register"
         addViewAndLayout()
         actions()
         observeData()
@@ -124,7 +119,6 @@ class RegisterViewController: UIViewController{
     }
     func addViewAndLayout(){
         view.backgroundColor = .white
-        view.addSubview(loginHeader)
         view.addSubview(emailCard)
         view.addSubview(passwordCard)
         view.addSubview(passwordCardConfirm)
@@ -138,8 +132,8 @@ class RegisterViewController: UIViewController{
         passwordCardConfirm.addSubview(lockCf)
         passwordCardConfirm.addSubview(passwordCf)
         passwordCardConfirm.addSubview(passwordEditCf)
-        loginHeader.anchor(view.topAnchor,left: view.leftAnchor,bottom: nil,right: view.rightAnchor,topConstant: 100,leftConstant: 0,bottomConstant: 0,rightConstant: 0, widthConstant: 0, heightConstant: 40)
-        emailCard.anchor(loginHeader.bottomAnchor,left: view.leftAnchor,bottom: nil,right: view.rightAnchor,topConstant: 110,leftConstant: 16,bottomConstant: 0,rightConstant: 21, widthConstant: 0, heightConstant: 85)
+        
+        emailCard.anchor(view.topAnchor,left: view.leftAnchor,bottom: nil,right: view.rightAnchor,topConstant: 140,leftConstant: 16,bottomConstant: 0,rightConstant: 21, widthConstant: 0, heightConstant: 85)
         emailIcon.anchor(emailCard.topAnchor,left: emailCard.leftAnchor,bottom: nil,right: nil,topConstant: 10,leftConstant: 9,bottomConstant: 0,rightConstant: 0, widthConstant: 20, heightConstant: 16)
         UserNameTitle.anchor(emailIcon.topAnchor,left: emailIcon.rightAnchor,bottom: emailIcon.bottomAnchor,right: nil,topConstant: 0,leftConstant: 13,bottomConstant: 0,rightConstant: 0, widthConstant: 140, heightConstant: 0)
         usernameEdit.anchor(emailIcon.bottomAnchor,left: emailCard.leftAnchor,bottom: nil,right: emailCard.rightAnchor,topConstant: 20,leftConstant: 17,bottomConstant: 0,rightConstant: 21, widthConstant: 0, heightConstant: 25)
