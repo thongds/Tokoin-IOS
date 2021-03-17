@@ -31,6 +31,8 @@
 		AF5F2ED925FCD203005C81BC /* HomeItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5F2ED825FCD203005C81BC /* HomeItemCell.swift */; };
 		AF5F2EDE25FCD20A005C81BC /* AutoLayoutExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5F2EDD25FCD20A005C81BC /* AutoLayoutExtension.swift */; };
 		AF5F2EE825FCE064005C81BC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5F2EE725FCE064005C81BC /* LoginViewController.swift */; };
+		AFDF375126018C450033D9D1 /* CustomNewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDF375026018C450033D9D1 /* CustomNewsViewModel.swift */; };
+		AFDF375626018C720033D9D1 /* CustomNewsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDF375526018C720033D9D1 /* CustomNewsRepository.swift */; };
 		D0F371C94D4A0545D6DC06F0 /* Pods_Tokoin_ios_Tokoin_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2969D874E8ADE700C40CEE6 /* Pods_Tokoin_ios_Tokoin_iosUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +89,8 @@
 		AF5F2ED825FCD203005C81BC /* HomeItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeItemCell.swift; sourceTree = "<group>"; };
 		AF5F2EDD25FCD20A005C81BC /* AutoLayoutExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoLayoutExtension.swift; sourceTree = "<group>"; };
 		AF5F2EE725FCE064005C81BC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		AFDF375026018C450033D9D1 /* CustomNewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNewsViewModel.swift; sourceTree = "<group>"; };
+		AFDF375526018C720033D9D1 /* CustomNewsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNewsRepository.swift; sourceTree = "<group>"; };
 		D5276FE3D44703D45FFA983F /* Pods_Tokoin_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tokoin_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6F2A754D32801EEFD2009AC /* Pods-Tokoin-iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tokoin-iosTests.release.xcconfig"; path = "Target Support Files/Pods-Tokoin-iosTests/Pods-Tokoin-iosTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -167,6 +171,8 @@
 			isa = PBXGroup;
 			children = (
 				AF45A4C52600B3D900B8E362 /* CustomNewsViewController.swift */,
+				AFDF375026018C450033D9D1 /* CustomNewsViewModel.swift */,
+				AFDF375526018C720033D9D1 /* CustomNewsRepository.swift */,
 			);
 			path = customNew;
 			sourceTree = "<group>";
@@ -523,9 +529,11 @@
 				AF5F2EA725FCB1B1005C81BC /* Tokoin_ios.xcdatamodeld in Sources */,
 				AF45A4B62600AA1F00B8E362 /* RegisterViewController.swift in Sources */,
 				AF45A4D22600B56200B8E362 /* NewsDetailViewController.swift in Sources */,
+				AFDF375626018C720033D9D1 /* CustomNewsRepository.swift in Sources */,
 				AF5F2EDE25FCD20A005C81BC /* AutoLayoutExtension.swift in Sources */,
 				AF5F2E9D25FCB1B1005C81BC /* AppDelegate.swift in Sources */,
 				AF58736A26016BAD00842CA2 /* DiscardableImageCacheItem.swift in Sources */,
+				AFDF375126018C450033D9D1 /* CustomNewsViewModel.swift in Sources */,
 				AF45A4C62600B3D900B8E362 /* CustomNewsViewController.swift in Sources */,
 				AF5F2E9F25FCB1B1005C81BC /* SceneDelegate.swift in Sources */,
 				AF5F2ED925FCD203005C81BC /* HomeItemCell.swift in Sources */,
