@@ -97,8 +97,11 @@ class RegisterViewController: UIViewController{
         actions()
         observeData()
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.isHidden = false
+    }
     func observeData(){
+        
         viewModel.error.observeOn(MainScheduler.instance).subscribe(onNext: {error in
             if(error.httpCode == 403){
                 let alert = UIAlertController(title: "Alert", message: error.message, preferredStyle: UIAlertController.Style.alert)
@@ -106,9 +109,11 @@ class RegisterViewController: UIViewController{
                 self.present(alert, animated: true, completion: nil)
             }
         }).disposed(by: disposeBag)
+        
         viewModel.success.observeOn(MainScheduler.instance).subscribe(onNext: {success in
             self.navigationController?.popViewController(animated: true)
         }).disposed(by: disposeBag)
+        
     }
     
     func actions(){

@@ -25,10 +25,10 @@
             </objects>
             <point key="canvasLocation" x="1555.072463768116" y="307.36607142857139"/>
         </scene>
-        <!--Login View Controller-->
+        <!--Profile View Controller-->
         <scene sceneID="N0y-vI-kW6">
             <objects>
-                <viewController id="B7M-zf-GwP" customClass="LoginViewController" customModule="Tokoin_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="B7M-zf-GwP" customClass="ProfileViewController" customModule="Tokoin_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ld8-va-9R6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

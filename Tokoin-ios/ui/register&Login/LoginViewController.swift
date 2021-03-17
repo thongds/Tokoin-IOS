@@ -1,7 +1,8 @@
 import UIKit
-
-
+import RxSwift
 class LoginViewController: UIViewController{
+    let viewModel = LoginViewModel()
+    private let disposeBag = DisposeBag()
     let loginHeader : UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -11,7 +12,7 @@ class LoginViewController: UIViewController{
         label.textAlignment = .center
         return label
         }()
-    let emailCard : UIView = {
+    let userCard : UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -21,17 +22,17 @@ class LoginViewController: UIViewController{
         image.translatesAutoresizingMaskIntoConstraints = false
         return image
     }()
-    let EmailTitle : UILabel = {
+    let userTitle : UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
-        label.text="Email"
+        label.text="User name"
         label.textAlignment = .left
         return label
         }()
-    let emailEdit : UITextField = {
+    let userEdit : UITextField = {
         let textField = UITextField()
-        textField.placeholder = "input your email here ..."
+        textField.placeholder = "input your user name here ..."
         return textField
         }()
     let passwordCard : UIView = {
@@ -54,6 +55,7 @@ class LoginViewController: UIViewController{
         }()
     let passwordEdit : UITextField = {
         let textField = UITextField()
+        textField.isSecureTextEntry = true
         textField.placeholder = "input your password here ..."
         return textField
         }()
@@ -76,29 +78,50 @@ class LoginViewController: UIViewController{
     }()
     
     override func viewDidLoad() {
-          super.viewDidLoad()
-          addViewAndLayout()
-          actions()
+        super.viewDidLoad()
+        addViewAndLayout()
+        actions()
+        observeData()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.isHidden = true
     }
 
+    func observeData(){
+        viewModel.error.observeOn(MainScheduler.instance).subscribe(onNext: {error in
+            if(error.httpCode == 404){
+                let alert = UIAlertController(title: "Alert", message: error.message, preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }
+        }).disposed(by: disposeBag)
+        
+        viewModel.userName.observeOn(MainScheduler.instance).subscribe(onNext: {success in
+            AppConfig.saveUserName(success)
+            self.navigationController?.popViewController(animated: false)
+        }).disposed(by: disposeBag)
+        
+    }
+    
     func addViewAndLayout(){
+        view.backgroundColor = .white
         view.addSubview(loginHeader)
-        view.addSubview(emailCard)
+        view.addSubview(userCard)
         view.addSubview(passwordCard)
         view.addSubview(loginBtn)
         view.addSubview(createPass)
-        emailCard.addSubview(emailIcon)
-        emailCard.addSubview(EmailTitle)
-        emailCard.addSubview(emailEdit)
+        userCard.addSubview(emailIcon)
+        userCard.addSubview(userTitle)
+        userCard.addSubview(userEdit)
         passwordCard.addSubview(lock)
         passwordCard.addSubview(password)
         passwordCard.addSubview(passwordEdit)
         loginHeader.anchor(view.topAnchor,left: view.leftAnchor,bottom: nil,right: view.rightAnchor,topConstant: 150,leftConstant: 0,bottomConstant: 0,rightConstant: 0, widthConstant: 0, heightConstant: 40)
-        emailCard.anchor(loginHeader.bottomAnchor,left: view.leftAnchor,bottom: nil,right: view.rightAnchor,topConstant: 110,leftConstant: 16,bottomConstant: 0,rightConstant: 21, widthConstant: 0, heightConstant: 85)
-        emailIcon.anchor(emailCard.topAnchor,left: emailCard.leftAnchor,bottom: nil,right: nil,topConstant: 10,leftConstant: 9,bottomConstant: 0,rightConstant: 0, widthConstant: 20, heightConstant: 16)
-        EmailTitle.anchor(emailIcon.topAnchor,left: emailIcon.rightAnchor,bottom: emailIcon.bottomAnchor,right: nil,topConstant: 0,leftConstant: 13,bottomConstant: 0,rightConstant: 0, widthConstant: 52, heightConstant: 0)
-        emailEdit.anchor(emailIcon.bottomAnchor,left: emailCard.leftAnchor,bottom: nil,right: emailCard.rightAnchor,topConstant: 20,leftConstant: 17,bottomConstant: 0,rightConstant: 21, widthConstant: 0, heightConstant: 25)
-        passwordCard.anchor(emailCard.bottomAnchor,left: view.leftAnchor,bottom: nil,right: view.rightAnchor,topConstant: 37,leftConstant: 16,bottomConstant: 0,rightConstant: 21, widthConstant: 0, heightConstant: 85)
+        userCard.anchor(loginHeader.bottomAnchor,left: view.leftAnchor,bottom: nil,right: view.rightAnchor,topConstant: 110,leftConstant: 16,bottomConstant: 0,rightConstant: 21, widthConstant: 0, heightConstant: 85)
+        emailIcon.anchor(userCard.topAnchor,left: userCard.leftAnchor,bottom: nil,right: nil,topConstant: 10,leftConstant: 9,bottomConstant: 0,rightConstant: 0, widthConstant: 20, heightConstant: 16)
+        userTitle.anchor(emailIcon.topAnchor,left: emailIcon.rightAnchor,bottom: emailIcon.bottomAnchor,right: nil,topConstant: 0,leftConstant: 13,bottomConstant: 0,rightConstant: 0, widthConstant: 100, heightConstant: 0)
+        userEdit.anchor(emailIcon.bottomAnchor,left: userCard.leftAnchor,bottom: nil,right: userCard.rightAnchor,topConstant: 20,leftConstant: 17,bottomConstant: 0,rightConstant: 21, widthConstant: 0, heightConstant: 25)
+        passwordCard.anchor(userCard.bottomAnchor,left: view.leftAnchor,bottom: nil,right: view.rightAnchor,topConstant: 37,leftConstant: 16,bottomConstant: 0,rightConstant: 21, widthConstant: 0, heightConstant: 85)
         lock.anchor(passwordCard.topAnchor,left: passwordCard.leftAnchor,bottom: nil,right: nil,topConstant: 7,leftConstant: 5,bottomConstant: 0,rightConstant: 0, widthConstant: 24, heightConstant: 24)
         password.anchor(lock.topAnchor,left: lock.rightAnchor,bottom: lock.bottomAnchor,right: nil,topConstant: 0,leftConstant: 12,bottomConstant: 0,rightConstant: 0, widthConstant: 86, heightConstant: 0)
         passwordEdit.anchor(lock.bottomAnchor,left: passwordCard.leftAnchor,bottom: nil,right: passwordCard.rightAnchor,topConstant: 12,leftConstant: 19,bottomConstant: 0,rightConstant: 19, widthConstant: 0, heightConstant: 25)
@@ -109,8 +132,12 @@ class LoginViewController: UIViewController{
     
     func actions(){
         createPass.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(openRegister)))
+        loginBtn.addTarget(self, action: #selector(login), for: .touchDown)
     }
     @objc func openRegister(){
         navigationController!.pushViewController(RegisterViewController(), animated: true)
+    }
+    @objc func login(){
+        viewModel.login(userName: userEdit.text ?? "", password: passwordEdit.text ?? "")
     }
 }

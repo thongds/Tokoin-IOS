@@ -31,6 +31,8 @@
 		AF5F2ED925FCD203005C81BC /* HomeItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5F2ED825FCD203005C81BC /* HomeItemCell.swift */; };
 		AF5F2EDE25FCD20A005C81BC /* AutoLayoutExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5F2EDD25FCD20A005C81BC /* AutoLayoutExtension.swift */; };
 		AF5F2EE825FCE064005C81BC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5F2EE725FCE064005C81BC /* LoginViewController.swift */; };
+		AF7F3EDC2601DA1400830C5B /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7F3EDB2601DA1400830C5B /* LoginViewModel.swift */; };
+		AF7F3EE52601E58600830C5B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7F3EE42601E58600830C5B /* ProfileViewController.swift */; };
 		AFDF375126018C450033D9D1 /* CustomNewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDF375026018C450033D9D1 /* CustomNewsViewModel.swift */; };
 		AFDF375626018C720033D9D1 /* CustomNewsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDF375526018C720033D9D1 /* CustomNewsRepository.swift */; };
 		AFDF376A2601AD1B0033D9D1 /* Login&RegisterRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDF37692601AD1B0033D9D1 /* Login&RegisterRepository.swift */; };
@@ -91,6 +93,8 @@
 		AF5F2ED825FCD203005C81BC /* HomeItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeItemCell.swift; sourceTree = "<group>"; };
 		AF5F2EDD25FCD20A005C81BC /* AutoLayoutExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoLayoutExtension.swift; sourceTree = "<group>"; };
 		AF5F2EE725FCE064005C81BC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		AF7F3EDB2601DA1400830C5B /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		AF7F3EE42601E58600830C5B /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		AFDF375026018C450033D9D1 /* CustomNewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNewsViewModel.swift; sourceTree = "<group>"; };
 		AFDF375526018C720033D9D1 /* CustomNewsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNewsRepository.swift; sourceTree = "<group>"; };
 		AFDF37692601AD1B0033D9D1 /* Login&RegisterRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login&RegisterRepository.swift"; sourceTree = "<group>"; };
@@ -154,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				AF5F2EE725FCE064005C81BC /* LoginViewController.swift */,
+				AF7F3EDB2601DA1400830C5B /* LoginViewModel.swift */,
 				AF45A4B52600AA1F00B8E362 /* RegisterViewController.swift */,
 				AFDF376E2601AFD40033D9D1 /* RegisterViewModel.swift */,
 				AFDF37692601AD1B0033D9D1 /* Login&RegisterRepository.swift */,
@@ -164,6 +169,7 @@
 		AF45A4C12600AD7100B8E362 /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				AF7F3EE32601E51B00830C5B /* profile */,
 				AF5F2EE325FCD24C005C81BC /* home */,
 				AF45A4BA2600AD5900B8E362 /* register&Login */,
 				AF45A4CA2600B3E000B8E362 /* customNew */,
@@ -284,6 +290,14 @@
 				AF58734C26015AF500842CA2 /* HomeRepository.swift */,
 			);
 			path = home;
+			sourceTree = "<group>";
+		};
+		AF7F3EE32601E51B00830C5B /* profile */ = {
+			isa = PBXGroup;
+			children = (
+				AF7F3EE42601E58600830C5B /* ProfileViewController.swift */,
+			);
+			path = profile;
 			sourceTree = "<group>";
 		};
 		AFDF375D2601AAB10033D9D1 /* coreData */ = {
@@ -534,6 +548,7 @@
 			files = (
 				AF58735926015D1B00842CA2 /* ErrorModel.swift in Sources */,
 				AF58733A2601116900842CA2 /* NewsListModel.swift in Sources */,
+				AF7F3EDC2601DA1400830C5B /* LoginViewModel.swift in Sources */,
 				AF58734D26015AF500842CA2 /* HomeRepository.swift in Sources */,
 				AF5F2EE825FCE064005C81BC /* LoginViewController.swift in Sources */,
 				AF58735326015B8900842CA2 /* AppConfig.swift in Sources */,
@@ -545,6 +560,7 @@
 				AF45A4D22600B56200B8E362 /* NewsDetailViewController.swift in Sources */,
 				AFDF375626018C720033D9D1 /* CustomNewsRepository.swift in Sources */,
 				AF5F2EDE25FCD20A005C81BC /* AutoLayoutExtension.swift in Sources */,
+				AF7F3EE52601E58600830C5B /* ProfileViewController.swift in Sources */,
 				AFDF376A2601AD1B0033D9D1 /* Login&RegisterRepository.swift in Sources */,
 				AFDF376F2601AFD40033D9D1 /* RegisterViewModel.swift in Sources */,
 				AF5F2E9D25FCB1B1005C81BC /* AppDelegate.swift in Sources */,

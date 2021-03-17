@@ -49,6 +49,7 @@ class CustomNewsViewController: UIViewController,UIPickerViewDataSource, UIPicke
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "Custom view"
         addViewAndLayout()
         pickerInput.inputView = picker
         observeData()
