@@ -33,6 +33,7 @@
 		AF5F2EE825FCE064005C81BC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5F2EE725FCE064005C81BC /* LoginViewController.swift */; };
 		AF7F3EDC2601DA1400830C5B /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7F3EDB2601DA1400830C5B /* LoginViewModel.swift */; };
 		AF7F3EE52601E58600830C5B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7F3EE42601E58600830C5B /* ProfileViewController.swift */; };
+		AF7F3EEE26020F7B00830C5B /* architech-ios.png in Resources */ = {isa = PBXBuildFile; fileRef = AF7F3EED26020F7B00830C5B /* architech-ios.png */; };
 		AFDF375126018C450033D9D1 /* CustomNewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDF375026018C450033D9D1 /* CustomNewsViewModel.swift */; };
 		AFDF375626018C720033D9D1 /* CustomNewsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDF375526018C720033D9D1 /* CustomNewsRepository.swift */; };
 		AFDF376A2601AD1B0033D9D1 /* Login&RegisterRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDF37692601AD1B0033D9D1 /* Login&RegisterRepository.swift */; };
@@ -95,6 +96,7 @@
 		AF5F2EE725FCE064005C81BC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		AF7F3EDB2601DA1400830C5B /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		AF7F3EE42601E58600830C5B /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		AF7F3EED26020F7B00830C5B /* architech-ios.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "architech-ios.png"; sourceTree = "<group>"; };
 		AFDF375026018C450033D9D1 /* CustomNewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNewsViewModel.swift; sourceTree = "<group>"; };
 		AFDF375526018C720033D9D1 /* CustomNewsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNewsRepository.swift; sourceTree = "<group>"; };
 		AFDF37692601AD1B0033D9D1 /* Login&RegisterRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login&RegisterRepository.swift"; sourceTree = "<group>"; };
@@ -251,6 +253,7 @@
 		AF5F2E9B25FCB1B1005C81BC /* Tokoin-ios */ = {
 			isa = PBXGroup;
 			children = (
+				AF7F3EEC26020F6500830C5B /* readme */,
 				AFDF375D2601AAB10033D9D1 /* coreData */,
 				AF58735126015B7A00842CA2 /* config */,
 				AF58736526016B3700842CA2 /* ViewExtension */,
@@ -298,6 +301,14 @@
 				AF7F3EE42601E58600830C5B /* ProfileViewController.swift */,
 			);
 			path = profile;
+			sourceTree = "<group>";
+		};
+		AF7F3EEC26020F6500830C5B /* readme */ = {
+			isa = PBXGroup;
+			children = (
+				AF7F3EED26020F7B00830C5B /* architech-ios.png */,
+			);
+			path = readme;
 			sourceTree = "<group>";
 		};
 		AFDF375D2601AAB10033D9D1 /* coreData */ = {
@@ -419,6 +430,7 @@
 				AF5F2EAC25FCB1B2005C81BC /* LaunchScreen.storyboard in Resources */,
 				AF5F2EA925FCB1B2005C81BC /* Assets.xcassets in Resources */,
 				AF5F2EA425FCB1B1005C81BC /* Main.storyboard in Resources */,
+				AF7F3EEE26020F7B00830C5B /* architech-ios.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
