@@ -33,6 +33,8 @@
 		AF5F2EE825FCE064005C81BC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5F2EE725FCE064005C81BC /* LoginViewController.swift */; };
 		AFDF375126018C450033D9D1 /* CustomNewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDF375026018C450033D9D1 /* CustomNewsViewModel.swift */; };
 		AFDF375626018C720033D9D1 /* CustomNewsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDF375526018C720033D9D1 /* CustomNewsRepository.swift */; };
+		AFDF376A2601AD1B0033D9D1 /* Login&RegisterRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDF37692601AD1B0033D9D1 /* Login&RegisterRepository.swift */; };
+		AFDF376F2601AFD40033D9D1 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFDF376E2601AFD40033D9D1 /* RegisterViewModel.swift */; };
 		D0F371C94D4A0545D6DC06F0 /* Pods_Tokoin_ios_Tokoin_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2969D874E8ADE700C40CEE6 /* Pods_Tokoin_ios_Tokoin_iosUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -91,6 +93,8 @@
 		AF5F2EE725FCE064005C81BC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		AFDF375026018C450033D9D1 /* CustomNewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNewsViewModel.swift; sourceTree = "<group>"; };
 		AFDF375526018C720033D9D1 /* CustomNewsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNewsRepository.swift; sourceTree = "<group>"; };
+		AFDF37692601AD1B0033D9D1 /* Login&RegisterRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login&RegisterRepository.swift"; sourceTree = "<group>"; };
+		AFDF376E2601AFD40033D9D1 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		D5276FE3D44703D45FFA983F /* Pods_Tokoin_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tokoin_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6F2A754D32801EEFD2009AC /* Pods-Tokoin-iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tokoin-iosTests.release.xcconfig"; path = "Target Support Files/Pods-Tokoin-iosTests/Pods-Tokoin-iosTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -151,6 +155,8 @@
 			children = (
 				AF5F2EE725FCE064005C81BC /* LoginViewController.swift */,
 				AF45A4B52600AA1F00B8E362 /* RegisterViewController.swift */,
+				AFDF376E2601AFD40033D9D1 /* RegisterViewModel.swift */,
+				AFDF37692601AD1B0033D9D1 /* Login&RegisterRepository.swift */,
 			);
 			path = "register&Login";
 			sourceTree = "<group>";
@@ -197,6 +203,8 @@
 		AF58735126015B7A00842CA2 /* config */ = {
 			isa = PBXGroup;
 			children = (
+				AF5F2E9E25FCB1B1005C81BC /* SceneDelegate.swift */,
+				AF5F2E9C25FCB1B1005C81BC /* AppDelegate.swift */,
 				AF58735226015B8900842CA2 /* AppConfig.swift */,
 			);
 			path = config;
@@ -237,16 +245,14 @@
 		AF5F2E9B25FCB1B1005C81BC /* Tokoin-ios */ = {
 			isa = PBXGroup;
 			children = (
+				AFDF375D2601AAB10033D9D1 /* coreData */,
 				AF58735126015B7A00842CA2 /* config */,
-				AF5F2E9C25FCB1B1005C81BC /* AppDelegate.swift */,
 				AF58736526016B3700842CA2 /* ViewExtension */,
-				AF5F2E9E25FCB1B1005C81BC /* SceneDelegate.swift */,
 				AF45A4C12600AD7100B8E362 /* ui */,
 				AF5F2EA225FCB1B1005C81BC /* Main.storyboard */,
 				AF5F2EA825FCB1B2005C81BC /* Assets.xcassets */,
 				AF5F2EAA25FCB1B2005C81BC /* LaunchScreen.storyboard */,
 				AF5F2EAD25FCB1B2005C81BC /* Info.plist */,
-				AF5F2EA525FCB1B1005C81BC /* Tokoin_ios.xcdatamodeld */,
 			);
 			path = "Tokoin-ios";
 			sourceTree = "<group>";
@@ -278,6 +284,14 @@
 				AF58734C26015AF500842CA2 /* HomeRepository.swift */,
 			);
 			path = home;
+			sourceTree = "<group>";
+		};
+		AFDF375D2601AAB10033D9D1 /* coreData */ = {
+			isa = PBXGroup;
+			children = (
+				AF5F2EA525FCB1B1005C81BC /* Tokoin_ios.xcdatamodeld */,
+			);
+			path = coreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -531,6 +545,8 @@
 				AF45A4D22600B56200B8E362 /* NewsDetailViewController.swift in Sources */,
 				AFDF375626018C720033D9D1 /* CustomNewsRepository.swift in Sources */,
 				AF5F2EDE25FCD20A005C81BC /* AutoLayoutExtension.swift in Sources */,
+				AFDF376A2601AD1B0033D9D1 /* Login&RegisterRepository.swift in Sources */,
+				AFDF376F2601AFD40033D9D1 /* RegisterViewModel.swift in Sources */,
 				AF5F2E9D25FCB1B1005C81BC /* AppDelegate.swift in Sources */,
 				AF58736A26016BAD00842CA2 /* DiscardableImageCacheItem.swift in Sources */,
 				AFDF375126018C450033D9D1 /* CustomNewsViewModel.swift in Sources */,

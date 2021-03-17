@@ -1,7 +1,9 @@
 import UIKit
-
+import RxSwift
 
 class RegisterViewController: UIViewController{
+    let viewModel = RegisterViewModel()
+    private let disposeBag = DisposeBag()
     let loginHeader : UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -80,7 +82,7 @@ class RegisterViewController: UIViewController{
         textField.placeholder = "input your password here ..."
         return textField
         }()
-    let loginBtn : UIButton = {
+    let registerBtn : UIButton = {
         let button = UIButton()
         button.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
         button.layer.cornerRadius = 10
@@ -88,18 +90,40 @@ class RegisterViewController: UIViewController{
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
+    
     override func viewDidLoad() {
-          super.viewDidLoad()
-          addViewAndLayout()
-          }
-
+        super.viewDidLoad()
+        addViewAndLayout()
+        actions()
+        observeData()
+    }
+    
+    func observeData(){
+        viewModel.error.observeOn(MainScheduler.instance).subscribe(onNext: {error in
+            if(error.httpCode == 403){
+                let alert = UIAlertController(title: "Alert", message: error.message, preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }
+        }).disposed(by: disposeBag)
+        viewModel.success.observeOn(MainScheduler.instance).subscribe(onNext: {success in
+            self.navigationController?.popViewController(animated: true)
+        }).disposed(by: disposeBag)
+    }
+    
+    func actions(){
+        registerBtn.addTarget(self, action: #selector(registerToLocal), for: .touchDown)
+    }
+    @objc func registerToLocal(){
+        viewModel.createUser(userName: usernameEdit.text ?? "", password: passwordEdit.text ?? "", confirmPassword: passwordEditCf.text ?? "")
+    }
     func addViewAndLayout(){
         view.backgroundColor = .white
         view.addSubview(loginHeader)
         view.addSubview(emailCard)
         view.addSubview(passwordCard)
         view.addSubview(passwordCardConfirm)
-        view.addSubview(loginBtn)
+        view.addSubview(registerBtn)
         emailCard.addSubview(emailIcon)
         emailCard.addSubview(UserNameTitle)
         emailCard.addSubview(usernameEdit)
@@ -122,6 +146,6 @@ class RegisterViewController: UIViewController{
         lockCf.anchor(passwordCardConfirm.topAnchor,left: passwordCardConfirm.leftAnchor,bottom: nil,right: nil,topConstant: 7,leftConstant: 5,bottomConstant: 0,rightConstant: 0, widthConstant: 24, heightConstant: 24)
         passwordCf.anchor(lockCf.topAnchor,left: lockCf.rightAnchor,bottom: lockCf.bottomAnchor,right: nil,topConstant: 0,leftConstant: 12,bottomConstant: 0,rightConstant: 0, widthConstant: 164, heightConstant: 0)
         passwordEditCf.anchor(lockCf.bottomAnchor,left: passwordCardConfirm.leftAnchor,bottom: nil,right: passwordCardConfirm.rightAnchor,topConstant: 12,leftConstant: 19,bottomConstant: 0,rightConstant: 19, widthConstant: 0, heightConstant: 25)
-        loginBtn.anchor(passwordCard.bottomAnchor,left: view.leftAnchor,bottom: nil,right: view.rightAnchor,topConstant: 156,leftConstant: 21,bottomConstant: 0,rightConstant: 18, widthConstant: 0, heightConstant: 52)
+        registerBtn.anchor(passwordCard.bottomAnchor,left: view.leftAnchor,bottom: nil,right: view.rightAnchor,topConstant: 156,leftConstant: 21,bottomConstant: 0,rightConstant: 18, widthConstant: 0, heightConstant: 52)
         }
 }
